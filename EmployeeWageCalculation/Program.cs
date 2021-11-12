@@ -15,6 +15,8 @@ namespace EmployeeWageCalculation
             parttime.EmployeeDailyWage();
             CalEmpWage Dailywage = new CalEmpWage();
             Dailywage.DailyEmployeeWage();
+            CalEmpWage Monthly = new CalEmpWage();
+            Monthly.MonthlyEmpWage();
         }
     }
 }

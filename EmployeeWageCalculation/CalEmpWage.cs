@@ -10,9 +10,11 @@ namespace EmployeeWageCalculation
     {
         public const int WAGE_PR_HR = 20, FULL_DAY_HOUR = 8, HALF_DAY_HOUR = 4, IS_PRESENT = 1, IS_ABSENT = 2;
         public const int IS_FULL_TIME = 1, IS_PART_TIME = 2, WAGE_PER_HR = 20, FULL_WORKING_HRS = 8, PART_WORKING_HRS = 4;
+        public const int PRESENT = 1, HALF_DAY = 2, TOTAL_DAYS = 20;
+        int totalSalary, empHr;
         int totalEmpWage, empHrs;
-        int totalSalary, TOTAL_HOUR = 0;
-        const int PRESENT = 1;
+        int TOTAL_HOUR = 0;
+        // const int PRESENT = 1;
         public void EmployeeCheck()
         {
             Random rand = new Random();
@@ -85,5 +87,29 @@ namespace EmployeeWageCalculation
             }
             Console.WriteLine(this.totalEmpWage = this.empHrs * WAGE_PER_HR);
         }
-      }
+
+        // UseCase-5 : Calculating Monthly Wage of Employee
+
+        public void MonthlyEmpWage()
+        {
+            Random rand = new Random();
+            int empCheck = rand.Next(0, 3);
+            for (int i = 0; i < TOTAL_DAYS; i++)
+                switch (empCheck)
+                {
+                    case PRESENT:
+                        this.empHr += FULL_DAY_HOUR;
+                        break;
+                    case HALF_DAY:
+                        this.empHr += HALF_DAY_HOUR;
+                        break;
+                    default:
+                        Console.WriteLine("Employee is Absent for the Day");
+                        break;
+                }
+            this.totalSalary = WAGE_PR_HR * empHr;
+            Console.WriteLine("Here is the Monthly Salary of Emp." + this.totalSalary);
+        }
+
+    }
     }
