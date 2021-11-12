@@ -17,6 +17,8 @@ namespace EmployeeWageCalculation
             Dailywage.DailyEmployeeWage();
             CalEmpWage Monthly = new CalEmpWage();
             Monthly.MonthlyEmpWage();
+            CalEmpWage Hours = new CalEmpWage();
+            Hours.MonthlyEmployeeWage();
         }
     }
 }
