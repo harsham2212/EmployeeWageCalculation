@@ -9,6 +9,8 @@ namespace EmployeeWageCalculation
     public class CalEmpWage
     {
         public const int WAGE_PR_HR = 20, FULL_DAY_HOUR = 8, HALF_DAY_HOUR = 4, IS_PRESENT = 1, IS_ABSENT = 2;
+        public const int IS_FULL_TIME = 1, IS_PART_TIME = 2, WAGE_PER_HR = 20, FULL_WORKING_HRS = 8, PART_WORKING_HRS = 4;
+        int totalEmpWage, empHrs;
         int totalSalary, TOTAL_HOUR = 0;
         const int PRESENT = 1;
         public void EmployeeCheck()
@@ -38,9 +40,9 @@ namespace EmployeeWageCalculation
         }
 
 
-        // Calculating Part-time and Daily wage
+        // UseCase -3 : Calculating Part-time and Daily wage
 
-        
+
         public void EmployeeDailyWage()
         {
             Random rand = new Random();
@@ -60,6 +62,28 @@ namespace EmployeeWageCalculation
             Console.WriteLine("Employee Salary is: " + this.totalSalary);
         }
 
-        //
+        // UseCase-4 : Using SwitchCase
+
+        public void DailyEmployeeWage()
+        {
+            Random random = new Random();
+            int empCheck = random.Next(0, 3);
+            switch (empCheck)
+            {
+                case IS_FULL_TIME:
+                    this.empHrs = FULL_WORKING_HRS;
+                    Console.WriteLine("Employee worked Full time");
+                    break;
+                case IS_PART_TIME:
+                    this.empHrs = PART_WORKING_HRS;
+                    Console.WriteLine("Employee worked Half time");
+                    break;
+                default:
+                    this.empHrs = 0;
+                    Console.WriteLine("Employee is absent");
+                    break;
+            }
+            Console.WriteLine(this.totalEmpWage = this.empHrs * WAGE_PER_HR);
+        }
+      }
     }
-}
