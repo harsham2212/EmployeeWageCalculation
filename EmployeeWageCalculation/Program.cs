@@ -11,6 +11,8 @@ namespace EmployeeWageCalculation
             attendance.EmployeeCheck();
             CalEmpWage Wages = new CalEmpWage();
             Wages.EmpWage();
+            CalEmpWage parttime = new CalEmpWage();
+            parttime.EmployeeDailyWage();
         }
     }
 }
