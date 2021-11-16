@@ -6,6 +6,7 @@ namespace EmployeeWageCalculation
     {
         static void Main(string[] args)
         {
+<<<<<<< HEAD
             Console.WriteLine("Displaying Welcome to EmployeeWage Computation Program");
             Console.WriteLine("Enter the Company Name: ");
             string company = Console.ReadLine();
@@ -18,6 +19,22 @@ namespace EmployeeWageCalculation
 
             CalEmpWage empWage = new CalEmpWage();
             empWage.ComputeEmployeeWage(company, empRatePrHr, numOfWorkingDays, maxHourPrMonth);
+=======
+            Console.WriteLine("Displaying Welcome to EmployeeWage Computation Program on Master Branch \n ");
+           
+            CalEmpWage Attendance = new CalEmpWage();
+            Attendance.EmployeeCheck();
+            CalEmpWage Wages = new CalEmpWage();
+            Wages.EmpWage();
+            CalEmpWage parttime = new CalEmpWage();
+            parttime.EmployeeDailyWage();
+            CalEmpWage Dailywage = new CalEmpWage();
+            Dailywage.DailyEmployeeWage();
+            CalEmpWage Monthly = new CalEmpWage();
+            Monthly.MonthlyEmpWage();
+            CalEmpWage Hours = new CalEmpWage();
+            Hours.MonthlyEmployeeWage();
+>>>>>>> UC6-Hours_Reached
         }
     }
 }
