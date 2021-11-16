@@ -4,19 +4,6 @@ using System.Text;
 
 namespace EmployeeWageCalculation
 
-<<<<<<< HEAD
-// UseCase-8 : Compute Employee Wage for multiple companies
-{
-    public class CalEmpWage
-    {
-            public const int WAGE_PR_HR = 20, FULL_DAY_HOUR = 8, HALF_DAY_HOUR = 4, PRESENT = 1, HALF_DAY = 2, TOTAL_DAYS = 20, TOTAL_HOUR = 100;
-            int totalSalary, empHr, totalEmpHrs = 0, totalWorkingDays = 0;
-            public int ComputeEmployeeWage(string company, int empRatePrHr, int numOfWorkingDays, int maxHourPrMonth)
-            {
-                Random rand = new Random();
-                int empCheck = rand.Next(0, 3);
-                while (totalEmpHrs <= maxHourPrMonth && totalWorkingDays <= numOfWorkingDays)
-=======
 // UseCase-1 : Checking randomly Employee is present or absent
 {
     public class CalEmpWage
@@ -58,7 +45,6 @@ namespace EmployeeWageCalculation
 
         // UseCase -3 : Calculating Part-time and Daily wage
 
-
         public void EmployeeDailyWage()
         {
             Random rand = new Random();
@@ -79,6 +65,7 @@ namespace EmployeeWageCalculation
         }
 
         // UseCase-4 : Using SwitchCase
+
 
         public void DailyEmployeeWage()
         {
@@ -110,7 +97,6 @@ namespace EmployeeWageCalculation
             int empCheck = rand.Next(0, 3);
             for (int i = 0; i < TOTAL_DAYS; i++)
                 switch (empCheck)
->>>>>>> UC6-Hours_Reached
                 {
                     case PRESENT:
                         this.empHr += FULL_DAY_HOUR;
@@ -147,22 +133,11 @@ namespace EmployeeWageCalculation
                         empHrs = 0;
                         break;
                 }
-<<<<<<< HEAD
-                this.totalSalary = WAGE_PR_HR * totalEmpHrs;
-                Console.WriteLine(" Monthly Wage of Emplyoyee is :" + this.totalSalary);
-                return totalSalary;
-=======
                 totalEmpHrs += empHrs;
                 Console.WriteLine("Day#:" + totalWorkingDays + " Employee Hours : " + empHrs);
->>>>>>> UC6-Hours_Reached
             }
             totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
             Console.WriteLine("Total Employee Wage : " + totalEmpWage);
         }
     }
-<<<<<<< HEAD
-=======
 }
-
-
->>>>>>> UC6-Hours_Reached
