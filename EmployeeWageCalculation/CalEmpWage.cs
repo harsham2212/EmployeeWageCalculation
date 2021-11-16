@@ -4,18 +4,17 @@ using System.Text;
 
 namespace EmployeeWageCalculation
 
-// UseCase-1 : Refactor the Code to write a Class Method to Compute Employee Wage
+// UseCase-8 : Compute Employee Wage for multiple companies
 {
     public class CalEmpWage
     {
-        public const int WAGE_PR_HR = 20, FULL_DAY_HOUR = 8, HALF_DAY_HOUR = 4, PRESENT = 1, HALF_DAY = 2, TOTAL_DAYS = 20, TOTAL_HOUR = 100;
-        int totalSalary, empHr, totalEmpHrs = 0, totalWorkingDays = 0;
-        public void EmployeeCheck()
-        {
+            public const int WAGE_PR_HR = 20, FULL_DAY_HOUR = 8, HALF_DAY_HOUR = 4, PRESENT = 1, HALF_DAY = 2, TOTAL_DAYS = 20, TOTAL_HOUR = 100;
+            int totalSalary, empHr, totalEmpHrs = 0, totalWorkingDays = 0;
+            public int ComputeEmployeeWage(string company, int empRatePrHr, int numOfWorkingDays, int maxHourPrMonth)
             {
                 Random rand = new Random();
                 int empCheck = rand.Next(0, 3);
-                while (totalEmpHrs <= TOTAL_HOUR && totalWorkingDays <= TOTAL_DAYS)
+                while (totalEmpHrs <= maxHourPrMonth && totalWorkingDays <= numOfWorkingDays)
                 {
                     totalWorkingDays++;
                     switch (empCheck)
@@ -35,8 +34,8 @@ namespace EmployeeWageCalculation
 
                 }
                 this.totalSalary = WAGE_PR_HR * totalEmpHrs;
-                Console.WriteLine(" Monthly Wage of Emloyee is :" + this.totalSalary);
+                Console.WriteLine(" Monthly Wage of Emplyoyee is :" + this.totalSalary);
+                return totalSalary;
             }
         }
     }
-}
