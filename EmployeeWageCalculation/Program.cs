@@ -7,7 +7,6 @@ namespace EmployeeWageCalculation
         static void Main(string[] args)
         {
             Console.WriteLine("Displaying Welcome to EmployeeWage Computation Program on Master Branch \n ");
-
             CalEmpWage Attendance = new CalEmpWage();
             Attendance.EmployeeCheck();
             CalEmpWage Wages = new CalEmpWage();

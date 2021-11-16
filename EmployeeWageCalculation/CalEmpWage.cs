@@ -45,7 +45,6 @@ namespace EmployeeWageCalculation
 
         // UseCase -3 : Calculating Part-time and Daily wage
 
-
         public void EmployeeDailyWage()
         {
             Random rand = new Random();
