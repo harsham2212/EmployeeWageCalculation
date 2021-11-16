@@ -67,6 +67,7 @@ namespace EmployeeWageCalculation
 
         // UseCase-4 : Using SwitchCase
 
+
         public void DailyEmployeeWage()
         {
             Random random = new Random();
